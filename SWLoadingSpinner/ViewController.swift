@@ -10,9 +10,14 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    var shape :SWLoadingSpinner = SWLoadingSpinner()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+    
+        self.shape.shapeLayer.lineWidth = 2.0;
+        self.shape.shapeLayer.strokeColor = UIColor.orangeColor().CGColor
+        self.view.addSubview(self.shape)
     }
 
     override func didReceiveMemoryWarning() {
